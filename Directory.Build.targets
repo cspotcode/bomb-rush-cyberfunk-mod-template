@@ -8,4 +8,9 @@
     <WriteLinesToFile File="$(GeneratedAssemblyInfoFile)" Lines="#pragma warning disable CS0436" Overwrite="true" />
     <WriteLinesToFile File="$(GeneratedAssemblyInfoFile)" Lines="@(Lines)" Overwrite="false" />
   </Target>
+
+  <!-- Shell scripts use these targets to get variables -->
+  <Target Name="LogTargetPath">
+    <Message Text="$(TargetPath)" Importance="High" />
+  </Target>
 </Project>
