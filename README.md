@@ -15,8 +15,11 @@ Guide to ripping and running the game in-editor: https://github.com/cspotcode/bo
 
 This guide assumes you can use git w/github.
 
-This guide was written for Visual Studio Code, but it should work in Rider and Visual Studio.  Only a few things are
+This guide was written for Visual Studio Code*, but it should work in Rider and Visual Studio.  Only a few things are
 specific to VSCode and should be easy to avoid.
+
+*I no longer recommend VSCode for beginners.  Use Visual Studio 2022 instead.  I still *personally* use VSCode a ton, because I have years of built-up muscle memory,
+and I have the technical skill to work through any jank.*
 
 ## Setup
 
