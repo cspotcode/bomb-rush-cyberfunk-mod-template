@@ -8,6 +8,7 @@ Youtube guide: https://www.youtube.com/watch?v=KopYonyplXs
 Links to project template: https://github.com/mroshaw/UnityModVSTemplate/tree/main/Templates/ProjectTemplates/C%23/Unity%20Mod%20(BepInEx)
 
 BepInEx guide: https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/index.html
+*Note: you don't need to use their template if you are using this template!  This template is preconfigured with all the necessary boilerplate.*
 
 Guide to ripping and running the game in-editor: https://github.com/cspotcode/bomb-rush-cyberfunk-modding/
 
