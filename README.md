@@ -2,16 +2,6 @@
 
 I took YuriLewd's Bomb Rush Cyberfunk plugin template, configured it for VSCode, added scripts to automate annoying tasks, wrote this README, hosted as a Github Template repo.
 
-## See also
-
-Youtube guide: https://www.youtube.com/watch?v=KopYonyplXs  
-Links to project template: https://github.com/mroshaw/UnityModVSTemplate/tree/main/Templates/ProjectTemplates/C%23/Unity%20Mod%20(BepInEx)
-
-BepInEx guide: https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/index.html
-*Note: you don't need to use their template if you are using this template!  This template is preconfigured with all the necessary boilerplate.*
-
-Guide to ripping and running the game in-editor: https://github.com/cspotcode/bomb-rush-cyberfunk-modding/
-
 ## Assumptions
 
 This guide assumes you can use git w/github.
@@ -67,6 +57,18 @@ With the game running, in VSCode run command "Attach Unity Debugger."  In Rider 
 VSCode's debugger appears to have a bug where breakpoints can get stuck enabled. That is, I hit a breakpoint, try to remove it and resume, but the game keeps hitting the breakpoint every frame.  Restarting the debugger might fix it. (Ctrl+Shift+F5)
 
 See also: https://code.visualstudio.com/docs/csharp/debugging
+
+## See also
+
+*Note: these links are informational, but if they describe other templates or starter projects, those may be different than this one! So use them with caution. They're for learning.*
+
+Youtube guide: https://www.youtube.com/watch?v=KopYonyplXs  
+Links to project template: https://github.com/mroshaw/UnityModVSTemplate/tree/main/Templates/ProjectTemplates/C%23/Unity%20Mod%20(BepInEx)
+
+BepInEx guide: https://docs.bepinex.dev/articles/dev_guide/plugin_tutorial/index.html
+*Note: you don't need to use their template if you are using this template!  This template is preconfigured with all the necessary boilerplate.*
+
+Guide to ripping and running the game in-editor: https://github.com/cspotcode/bomb-rush-cyberfunk-modding/
 
 ## Thanks
 
