@@ -36,8 +36,9 @@
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <PropertyGroup>
-      <Command>
-        xcopy /q/y/i "$(TargetDir)" "$(BepInExDirectory)\plugins\SafeProjectName" /E /H /C
+      <!-- intentionally no newline before REM so it appears in IDE "Error" pane -->
+      <Command>REM Copying plugin to BepInEx directory. This may fail if game is running; close game and try again
+        xcopy /q/y/i "$(TargetDir)" "$(BepInExDirectory)\plugins\SafeProjectName" /E /H
       </Command>
     </PropertyGroup>
     <Exec Command="$(Command)" />
