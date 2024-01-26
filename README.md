@@ -43,8 +43,10 @@ Create two environment variables:
 - Add `BepInExDirectory` environment variable with path to your BepInEx directory. It might look something like this: `C:\Users\myusername\AppData\Roaming\Thunderstore Mod Manager\DataFolder\BombRushCyberfunk\profiles\Default\BepInEx`
 - Restart your IDE to be sure it sees the latest values.
 
-"Build" the code: "Build->Build Solution" in Visual Studio 2022, Ctrl+Shift+B in VSCode.  If there are errors about non-`publicized` missing assemblies,
-then your environment variables are wrong.
+"Build" the code: "Build->Build Solution" in Visual Studio 2022, Ctrl+Shift+B in VSCode.  If there are errors about missing assemblies or classes,
+your environment variables are probably wrong.
+
+*If Visual Studio does not show "Build Solution," you probably need to open the solution / `.sln` file. This might require some clicking around.*
 
 ## Debugging
 
