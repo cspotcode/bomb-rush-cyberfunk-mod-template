@@ -12,7 +12,7 @@ namespace SafeProjectName
     [BepInPlugin(MyGUID, PluginName, VersionString)]
     public class SafeProjectNamePlugin : BaseUnityPlugin
     {
-        private const string MyGUID = "com.$username$.SafeProjectName";
+        private const string MyGUID = "com.Username.SafeProjectName";
         private const string PluginName = "SafeProjectName";
         private const string VersionString = "1.0.0";
 

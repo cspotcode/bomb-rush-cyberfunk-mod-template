@@ -11,7 +11,7 @@
   </PropertyGroup>
   
   <PropertyGroup>
-	<ManagedPath>$(BRCPath)/Bomb Rush Cyberfunk_Data/Managed</ManagedPath>
+	  <ManagedPath>$(BRCPath)/Bomb Rush Cyberfunk_Data/Managed</ManagedPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -35,6 +35,11 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /q/y/i &quot;$(TargetDir)&quot; &quot;$(BepInExDirectory)\plugins\SafeProjectName&quot; /E /H /C" />
+    <PropertyGroup>
+      <Command>
+        xcopy /q/y/i "$(TargetDir)" "$(BepInExDirectory)\plugins\SafeProjectName" /E /H /C
+      </Command>
+    </PropertyGroup>
+    <Exec Command="$(Command)" />
   </Target>
 </Project>

@@ -6,38 +6,45 @@ I took YuriLewd's Bomb Rush Cyberfunk plugin template, configured it for VSCode,
 
 This guide assumes you can use git w/github.
 
-This guide was written for Visual Studio Code*, but it should work in Rider and Visual Studio.  Only a few things are
-specific to VSCode and should be easy to avoid.
+This guide should work in Visual Studio 2022, JetBrains Rider, and VSCode.
 
-*I no longer recommend VSCode for beginners.  Use Visual Studio 2022 instead.  I still *personally* use VSCode a ton, because I have years of built-up muscle memory,
-and I have the technical skill to work through any jank.*
+*I no longer recommend VSCode for beginners.  Use Visual Studio 2022 instead.  I still personally use VSCode a ton, because I have years of built-up muscle memory, and I have the technical skill to work through any jank.*
 
 ## Setup
 
 Install dotnet: https://dotnet.microsoft.com/en-us/download
 
-Install Visual Studio 2022 (recommended), JetBrains Rider, or VSCode
+Install an IDE: Visual Studio 2022 (recommended), JetBrains Rider (also great), or VSCode (I love it, but prepare for some jank)
 <!--https://code.visualstudio.com/-->
 
 Install Unity Editor 2021.3.20f1: https://unity.com/releases/editor/whats-new/2021.3.20
 
-Click "Use this template" to clone this code into your own repository.  Clone it, open it in your chosen editor. (Visual Studio 2022 recommended)
+On Github, click "Use this template" to clone this code into your own repository in your own github account. *you must be logged in to github*
+
+Use Git, Github Desktop, or your chosen IDE to clone your newly-created GitHub repository.  Open it in your chosen IDE.
 
 _**VSCode only:**_ Install recommended extensions for this project.  VSCode should auto-prompt for this(?) `.vscode/extensions.json`
 
-Find and replace (Ctrl+Shift+H in VSCode) `SafeProjectName` with a C# namespace for your plugin to live in, something like `DDRCypherMinigame` or whatever.
+Use your IDE's "Replace in Files" feature to find-and-replace `SafeProjectName` in every file in the project. Replace it with a C# namespace for your plugin, something like `DDRCypherMinigame` or whatever. No funky punctuation or spaces, can't start with a number.
 
-<!-- Open `AssemblyInfo.cs` and set a GUID at a minimum, also customize the other fields.  Ctrl+Shift+P, "Copy new UUID to clipboard", paste it in. -->
+*See also: [C#'s naming rules](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/identifier-names#naming-rules)*
 
-Open `MyPlugin.cs` and customize strings.  Where it says `$username$` replace with your username or similar, remove `$`s.
+Open `Plugin.cs` and customize strings.  Where it says `Username` replace with your username or similar, no funky punctuation or spaces, can't start with a number.
 
 Download pdb2mdb, put it at `./scripts/pdb2mdb.exe`: https://docs.bepinex.dev/articles/advanced/debug/plugins_vs.html
 
 <!-- Generate publicized game dll.  PowerShell script `./scripts/generate-publicized-assemblies.ps1` may do the trick. If it's confused about install location of BRC,
 pass as `./scripts/generate-publicized-assemblies.ps1 -brcInstallDirectory PATH_HERE` or jump to next step to fix `.csproj` variables and then come back. -->
 
+Create two environment variables:
+
+- In Start menu, go to "Edit Environment Variables for your account"
+- Add `BRCPath` environment variable with path where Bomb Rush Cyberfunk is installed. It might look something like this: `E:\Games\SteamLibrary\steamapps\common\BombRushCyberfunk`
+- Add `BepInExDirectory` environment variable with path to your BepInEx directory. It might look something like this: `C:\Users\myusername\AppData\Roaming\Thunderstore Mod Manager\DataFolder\BombRushCyberfunk\profiles\Default\BepInEx`
+- Restart your IDE to be sure it sees the latest values.
+
 "Build" the code: "Build->Build Solution" in Visual Studio 2022, Ctrl+Shift+B in VSCode.  If there are errors about non-`publicized` missing assemblies,
-then your environment variables are wrong.  Restart your editor *after* saving the environment variables to make sure it gets the latest values.
+then your environment variables are wrong.
 
 ## Debugging
 

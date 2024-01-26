@@ -1,5 +1,9 @@
 param($brcInstallDirectory)
 
+#
+# Don't use this script! The .csproj creates publicized assemblies automatically
+#
+
 # Auto-detect game's install location
 if(-not $brcInstallDirectory) {
     $brcInstallDirectory=$(dotnet msbuild -t:LogBRCInstallDirectory -nologo).trim()
