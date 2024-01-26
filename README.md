@@ -19,7 +19,7 @@ Install an IDE: Visual Studio 2022 (recommended), JetBrains Rider (also great), 
 
 Install Unity Editor 2021.3.20f1: https://unity.com/releases/editor/whats-new/2021.3.20
 
-On Github, click "Use this template" to clone this code into your own repository in your own github account. *you must be logged in to github*
+On Github, click "Use this template" to clone this code into your own repository in your own github account. *you must be logged in to github to see this button*
 
 Use Git, Github Desktop, or your chosen IDE to clone your newly-created GitHub repository.  Open it in your chosen IDE.
 
