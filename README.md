@@ -16,29 +16,28 @@ and I have the technical skill to work through any jank.*
 
 Install dotnet: https://dotnet.microsoft.com/en-us/download
 
-Install VSCode: https://code.visualstudio.com/
+Install Visual Studio 2022 (recommended), JetBrains Rider, or VSCode
+<!--https://code.visualstudio.com/-->
 
 Install Unity Editor 2021.3.20f1: https://unity.com/releases/editor/whats-new/2021.3.20
 
-Click "Use this template" to clone this code into your own repository.  Clone it, open it in VSCode.
+Click "Use this template" to clone this code into your own repository.  Clone it, open it in your chosen editor. (Visual Studio 2022 recommended)
 
-Install recommended extensions for this project.  VSCode should auto-prompt for this(?) `.vscode/extensions.json`
+_**VSCode only:**_ Install recommended extensions for this project.  VSCode should auto-prompt for this(?) `.vscode/extensions.json`
 
 Find and replace (Ctrl+Shift+H in VSCode) `SafeProjectName` with a C# namespace for your plugin to live in, something like `DDRCypherMinigame` or whatever.
 
 <!-- Open `AssemblyInfo.cs` and set a GUID at a minimum, also customize the other fields.  Ctrl+Shift+P, "Copy new UUID to clipboard", paste it in. -->
 
-Open `MyPlugin.cs` and customize strings.
+Open `MyPlugin.cs` and customize strings.  Where it says `$username$` replace with your username or similar, remove `$`s.
 
 Download pdb2mdb, put it at `./scripts/pdb2mdb.exe`: https://docs.bepinex.dev/articles/advanced/debug/plugins_vs.html
 
 <!-- Generate publicized game dll.  PowerShell script `./scripts/generate-publicized-assemblies.ps1` may do the trick. If it's confused about install location of BRC,
 pass as `./scripts/generate-publicized-assemblies.ps1 -brcInstallDirectory PATH_HERE` or jump to next step to fix `.csproj` variables and then come back. -->
 
-"Build" the code: Ctrl+Shift+B in VSCode.  If there are errors about non-`publicized` missing assemblies,
-then the paths in `.csproj` are wrong. Open the `.csproj` file and check
-the `<Reference>` elements.  They refer to variables defined in `<PropertyGroup>` at the top of the file.  Usually modifying the variables is the easiest
-way to fix the build.
+"Build" the code: "Build->Build Solution" in Visual Studio 2022, Ctrl+Shift+B in VSCode.  If there are errors about non-`publicized` missing assemblies,
+then your environment variables are wrong.  Restart your editor *after* saving the environment variables to make sure it gets the latest values.
 
 ## Debugging
 
